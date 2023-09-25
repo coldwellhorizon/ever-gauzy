@@ -4,13 +4,13 @@ apiVersion: v1
 metadata:
     name: gauzy-prod-web-lb
     annotations:
-        service.beta.kubernetes.io/do-loadbalancer-name: 'app.gauzy.co'
+        service.beta.kubernetes.io/do-loadbalancer-name: 'app.coldwellhorizon.ca'
         service.beta.kubernetes.io/do-loadbalancer-protocol: 'http2'
         service.beta.kubernetes.io/do-loadbalancer-http2-ports: '443'
         # Replace with your Certificate Id. You can get a list of Ids with 'doctl compute certificate list'
-        service.beta.kubernetes.io/do-loadbalancer-certificate-id: '4bf6d197-6dbb-4394-815b-a543761d94d2'
+        service.beta.kubernetes.io/do-loadbalancer-certificate-id: 'cd639660-2cd5-47f6-be1c-b77a68b49c3c'
         service.beta.kubernetes.io/do-loadbalancer-size-slug: 'lb-small'
-        service.beta.kubernetes.io/do-loadbalancer-hostname: 'app.gauzy.co'
+        service.beta.kubernetes.io/do-loadbalancer-hostname: 'app.coldwellhorizon.ca'
 spec:
     type: LoadBalancer
     selector:
@@ -26,13 +26,13 @@ apiVersion: v1
 metadata:
     name: gauzy-prod-api-lb
     annotations:
-        service.beta.kubernetes.io/do-loadbalancer-name: 'api.gauzy.co'
+        service.beta.kubernetes.io/do-loadbalancer-name: 'api.coldwellhorizon.ca'
         service.beta.kubernetes.io/do-loadbalancer-protocol: 'http2'
         service.beta.kubernetes.io/do-loadbalancer-http2-ports: '443'
         # Replace with your Certificate Id. You can get a list of Ids with 'doctl compute certificate list'
-        service.beta.kubernetes.io/do-loadbalancer-certificate-id: '4bf6d197-6dbb-4394-815b-a543761d94d2'
+        service.beta.kubernetes.io/do-loadbalancer-certificate-id: 'cd639660-2cd5-47f6-be1c-b77a68b49c3c'
         service.beta.kubernetes.io/do-loadbalancer-size-slug: 'lb-small'
-        service.beta.kubernetes.io/do-loadbalancer-hostname: 'api.gauzy.co'
+        service.beta.kubernetes.io/do-loadbalancer-hostname: 'api.coldwellhorizon.ca'
 spec:
     type: LoadBalancer
     selector:
